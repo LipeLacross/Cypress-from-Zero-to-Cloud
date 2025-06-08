@@ -4,21 +4,21 @@
 
 Projeto exemplo do curso **Cypress, do Zero à Nuvem** da Escola Talking About Testing.
 
-Este repositório demonstra como criar, organizar e executar testes automatizados de interface web utilizando o framework Cypress, desde a configuração local até a integração com pipelines de CI/CD e Cypress Cloud.
+Este repositório demonstra como criar, organizar e executar testes automatizados de interface web utilizando o framework Cypress, desde a configuração local até a integração com pipelines de CI/CD e Cypress Cloud[1][2][3].
 
 ---
 
 ## 🔨 Funcionalidades do Projeto
 
-- Testes E2E completos para uma aplicação web de atendimento ao cliente (CAC TAT)
-- Cobertura de todos os fluxos principais do formulário: preenchimento, validação, seleção de produtos, tipos de atendimento, uploads, links e mensagens
-- Comandos customizados para fácil manutenção e reutilização de código
-- Execução dos testes em múltiplos ambientes: local, mobile, CI/CD e nuvem (Cypress Cloud)
-- Integração pronta para pipelines no GitHub Actions
+- **Testes E2E completos** para uma aplicação web de atendimento ao cliente (CAC TAT)
+- **Cobertura de todos os fluxos principais** do formulário: preenchimento, validação, seleção de produtos, tipos de atendimento, uploads, links e mensagens
+- **Comandos customizados** para fácil manutenção e reutilização de código
+- **Execução dos testes em múltiplos ambientes**: local, mobile, CI/CD e nuvem (Cypress Cloud)
+- **Integração pronta para pipelines no GitHub Actions**
 
 ### Exemplo Visual do Projeto
 
-A aplicação simulada traz um formulário de contato com campos obrigatórios, seleção de produtos, tipos de atendimento, upload de arquivos e link para política de privacidade.
+A aplicação simulada traz um formulário de contato com campos obrigatórios, seleção de produtos, tipos de atendimento, upload de arquivos e link para política de privacidade[1].
 
 ---
 
@@ -78,7 +78,7 @@ A aplicação simulada traz um formulário de contato com campos obrigatórios, 
 
 2. **Clone o repositório:**
    ```
-   git clone 
+   git clone https://github.com//cypress-do-zero-a-nuvem.git
    cd cypress-do-zero-a-nuvem
    ```
 
@@ -88,15 +88,17 @@ A aplicação simulada traz um formulário de contato com campos obrigatórios, 
    ```
 
 4. **Abra a aplicação localmente:**
-   - Abra o arquivo `src/index.html` no navegador, ou utilize um servidor local (ex: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VSCode).
+   - **Direto no navegador:**  
+     Abra o arquivo `src/index.html` no navegador.
+   - **Com servidor local (opcional):**
+     - **Python:**  
+       ```
+       python -m http.server 8000
+       ```
+       Acesse `http://localhost:8000/src/index.html` no navegador.
+     - **Live Server (VSCode):**  
+       Instale a extensão "Live Server" e abra o arquivo `src/index.html` com ela.
 
-
-pode ser em python
-    - Para rodar um servidor local simples, você pode usar:
-      ```
-      python -m http.server 8000
-      ```
-    - Acesse `http://localhost:8000/src/index.html` no navegador.
 5. **Execute os testes:**
 
    - **Modo interativo (Cypress App):**
@@ -119,6 +121,7 @@ pode ser em python
      ```
      npm run test:cloud
      ```
+     > **OBS:** Para enviar resultados à nuvem, configure a variável `CYPRESS_RECORD_KEY` no seu ambiente.
 
 ---
 
@@ -128,20 +131,20 @@ pode ser em python
 
 O projeto já está configurado para execução automática dos testes em pipelines CI/CD usando GitHub Actions. O arquivo `.github/workflows/ci.yml` realiza:
 
-- Instalação das dependências
-- Execução dos testes Cypress em modo headless
-- (Opcional) Integração com Cypress Cloud para relatórios e analytics
+- **Instalação das dependências**
+- **Execução dos testes Cypress em modo headless**
+- **(Opcional) Integração com Cypress Cloud para relatórios e analytics**
 
 **Como funciona:**
-- A cada push, o workflow é disparado e executa todos os testes automaticamente.
-- Resultados ficam disponíveis no GitHub (aba Actions) e no Cypress Cloud (se configurado).
+- **A cada push**, o workflow é disparado e executa todos os testes automaticamente.
+- **Resultados** ficam disponíveis no GitHub (aba Actions) e no Cypress Cloud (se configurado).
 
 **Para Cypress Cloud:**
-- Adicione a variável `CYPRESS_RECORD_KEY` nos segredos do repositório.
-- O script `npm run test:cloud` será executado e enviará os resultados para a nuvem.
+- **Adicione a variável `CYPRESS_RECORD_KEY`** nos segredos do repositório.
+- **O script `npm run test:cloud`** será executado e enviará os resultados para a nuvem.
 
 **Exemplo de configuração do workflow:**
-```
+```yaml
 name: End-to-end tests
 on: push
 jobs:
@@ -180,3 +183,16 @@ jobs:
 - **CI/CD:** Garanta qualidade contínua rodando os testes a cada alteração no código.
 - **Cypress Cloud:** Analise execuções, identifique testes instáveis e compartilhe resultados com o time.
 - **Personalização:** Adapte comandos, scripts e configurações para seu contexto real de projeto.
+
+---
+
+> **Dica:** Para rodar os testes em CI, lembre-se de iniciar o servidor local antes dos testes, caso utilize o Cypress com `baseUrl` configurado para `http://localhost:8080` (ou outra porta).  
+> **Exemplo no workflow:**  
+> ```yaml
+> - name: Start local server
+>   run: python -m http.server 8080 &
+> ```
+> E adicione o parâmetro `wait-on: 'http://localhost:8080'` na ação do Cypress para garantir que o servidor esteja pronto antes dos testes.
+
+---
+atch?v=k4Rsy8GbKE0
