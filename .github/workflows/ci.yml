@@ -6,9 +6,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Start local server
+        run: |
+          npm install
+          python3 -m http.server 8080 &
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
           command: npm run test:cloud
+          wait-on: 'http://localhost:8080' # Espera até o servidor estar pronto
+
