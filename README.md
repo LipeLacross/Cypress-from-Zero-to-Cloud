@@ -4,7 +4,7 @@
 
 Projeto exemplo do curso **Cypress, do Zero à Nuvem** da Escola Talking About Testing.
 
-Este repositório demonstra como criar, organizar e executar testes automatizados de interface web utilizando o framework Cypress, desde a configuração local até a integração com pipelines de CI/CD e Cypress Cloud[1][2][3].
+Este repositório demonstra como criar, organizar e executar testes automatizados de interface web utilizando o framework Cypress, desde a configuração local até a integração com pipelines de CI/CD e Cypress Cloud.
 
 ---
 
@@ -17,8 +17,9 @@ Este repositório demonstra como criar, organizar e executar testes automatizado
 - **Integração pronta para pipelines no GitHub Actions**
 
 ### Exemplo Visual do Projeto
+![cypress-video531c344c-a382-4d51-ae73-f6d9d3c075ea (1)](https://github.com/user-attachments/assets/6d485694-8117-4070-af76-104646dbc686)
 
-A aplicação simulada traz um formulário de contato com campos obrigatórios, seleção de produtos, tipos de atendimento, upload de arquivos e link para política de privacidade[1].
+A aplicação simulada traz um formulário de contato com campos obrigatórios, seleção de produtos, tipos de atendimento, upload de arquivos e link para política de privacidade.
 
 ---
 
