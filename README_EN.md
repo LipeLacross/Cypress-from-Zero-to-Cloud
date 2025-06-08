@@ -4,7 +4,7 @@
 
 Sample project for the **Cypress, from Zero to the Cloud** course by the Talking About Testing School.
 
-This repository demonstrates how to create, organize, and run automated web interface tests using the Cypress framework, from local setup to integration with CI/CD pipelines and Cypress Cloud[2][3][4].
+This repository demonstrates how to create, organize, and run automated web interface tests using the Cypress framework, from local setup to integration with CI/CD pipelines and Cypress Cloud.
 
 ---
 
@@ -17,8 +17,9 @@ This repository demonstrates how to create, organize, and run automated web inte
 - **Ready-to-use integration with GitHub Actions pipelines**
 
 ### Visual Example
+![cypress-video531c344c-a382-4d51-ae73-f6d9d3c075ea (1)](https://github.com/user-attachments/assets/6d485694-8117-4070-af76-104646dbc686)
 
-The sample application features a contact form with required fields, product selection, support types, file upload, and a privacy policy link[1][2].
+The sample application features a contact form with required fields, product selection, support types, file upload, and a privacy policy link.
 
 ---
 
