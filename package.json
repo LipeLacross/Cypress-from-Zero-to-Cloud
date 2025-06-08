@@ -2,16 +2,18 @@
   "name": "cypress-do-zero-a-nuvem",
   "version": "1.0.0",
   "description": "Projeto exemplo do curso Cypress, do Zero à Nuvem.",
-"scripts": {
-  "cy:open": "cypress open",
-  "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
-  "test": "cypress run",
-  "test:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
-  "test:cloud": "cypress run --record",
-  "test:ci": "cypress run --headless --browser chrome"
-}
-,
+  "scripts": {
+    "start": "http-server src -p 8080 -s",
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
+    "test": "cypress run",
+    "test:mobile": "cypress run --config viewportWidth=410,viewportHeight=860",
+    "test:cloud": "cypress run --record",
+    "test:ci": "start-server-and-test start http://localhost:8080 test"
+  },
   "devDependencies": {
-    "cypress": "^14.4.1"
+    "cypress": "^14.4.1",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.3"
   }
 }

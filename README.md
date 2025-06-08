@@ -90,6 +90,13 @@ A aplicação simulada traz um formulário de contato com campos obrigatórios, 
 4. **Abra a aplicação localmente:**
    - Abra o arquivo `src/index.html` no navegador, ou utilize um servidor local (ex: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VSCode).
 
+
+pode ser em python
+    - Para rodar um servidor local simples, você pode usar:
+      ```
+      python -m http.server 8000
+      ```
+    - Acesse `http://localhost:8000/src/index.html` no navegador.
 5. **Execute os testes:**
 
    - **Modo interativo (Cypress App):**
